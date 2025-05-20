@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <script>
+        /*
+        function greeting(){
+            console.log("Hello");
+        }
+        greeting(); //calling function
+
+        //Functions are values - just like numbers we can store functions inside variables
+        const function1 = function greeting() {
+            console.log('hello2');
+        }
+        console.log(function1);
+        console.log(typeof function1);
+        function1(); //this runs the code inside the function greeting inside the variable function1
+
+
+        //ANONYMOUS FUNCTION
+        const function2 = function() { //since it already has a variable it does not need a seperate function name
+            console.log('hello2');
+        }
+        console.log(function1);
+        console.log(typeof function1);
+        function2();
+
+        const object1 = {
+            num: 2,
+            fun : function greeting() {
+                console.log("Hello3");
+            }
+        };
+        object1.fun(); //runs the function inside the object
+
+        //We can also use an anonymous function inside an object
+        const object2 = {
+            num: 2,
+            fun : function() {
+                console.log("Hello4");
+            }
+        };
+        object2.fun(); //runs the function inside the object
+
+        //Since functions are values, we can also pass a function inside another function
+
+        function run(param) {
+            param(); //this code will run the function that is passed
+        }
+        run(function(){
+            console.log("Hello5")
+        })
+        */
+
+
+        //setTimeout(); -> we use this to run a function in the future.
+        /*
+        setTimeout(function() {
+            console.log('timeout')
+        }, 3000);
+        //inside the setTimeout(), we pass the function and the time after which the function should run.
+        //setTimeout(function to run, Time(in milliseconds))
+        //it will run the function after 3 seconds 
+
+        console.log('next line');
+
+        //The setTimeout and the printing of next line is an asynchronous code, because it won't wait for the setTimeout function to finish, it will first start the timer for 3 seconds, print the line 'next line', then run after 3 seconds, run the function inside setTimeout
+
+        //Asynchronous Code - won't wait for a line to finish before going to the next line
+
+        //Synchronous Code - will wait for a line to finish before going to the next line
+
+
+
+        //setInterval() -> keep running the function after a period of time
+
+        setInterval(function() {
+            console.log('interval')
+        }, 3000); //it will keep running the function after every 3 seconds. 
+
+        console.log('next line2');
+        */
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach(function(value, index) { //forEach loop loops through every element in the array and displays the value
+            console.log(index); //displays index 
+            console.log(value)
+        })
+
+    </script>
+</body>
+
+</html>
