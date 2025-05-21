@@ -15,6 +15,9 @@
     <button class="js-button">Click</button>
 
     <script>
+        /*
+        //EVENT LISTENER
+
         //addEventListener() -- lets us run some code when we interact with the element(sort of does the same thing as onclick)
         
         const buttonElement = document.querySelector('.js-button');
@@ -38,7 +41,6 @@
         */
 
         // So the best practice is to use eventListener instead of onclick
-
 
         /*
         function greeting(){
@@ -186,6 +188,38 @@
             }
         };
         */
+
+        //FILTER ARRAY METHOD - filters out some numbers from an array based on some condition
+        console.log([1, -3, 5].filter((value, index) => { //filter function creates a new array
+        // if the function returns true, it takes the element from the original array and puts in the new array
+        // if it returns false, it will not put the element in the new array
+            /*
+            if(value >= 0) { //if the value is positive it will store the value in the new array
+                return true;
+            }
+            else {
+                // if the value is false, it will not store the value in the new array
+                return false;
+            }
+            */
+           return value>=0;  //does the same thing as the lines above
+        }));
+
+        //MAP ARRAY METHOD - for example we have an array and we want to double each number in the array, for that we use map method
+
+        //map creates a new array and whatever we return will be added to the new array
+        console.log([1, 1, 3].map((value, index) => {
+            return value+10; //takes each value from the array, adds 10 to it and puts it in the new array
+        }));
+
+        //shortcut for arrow function
+        //if we have only one passing parameter in the function, then the extra bracket is not needed
+        console.log([1, 1, 3].map(value => value+10)); //takes each value from the array, adds 10 to it and puts it in the new array
+
+        //CLOSURE - It is a feature of function, it means if a function has access to a value, it will always have access to that value
+        //it happens naturally as we write js code
+        
+
     </script>
 </body>
 
