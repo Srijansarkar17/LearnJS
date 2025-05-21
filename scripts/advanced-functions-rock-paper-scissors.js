@@ -21,7 +21,7 @@ let intervalId;
 
 function autoPlay(){
     if(!isAutoPlaying){ //if the player is not playing then after clicking the button, this function will run
-        intervalId = setInterval(function() { //the setInterval function returns an intervalId which will be fed to the else part to stop the interval using the intervalId
+        intervalId = setInterval(() => { //the setInterval function returns an intervalId which will be fed to the else part to stop the interval using the intervalId
         const playerMove = pickComputerMove();
         playGame(playerMove);
     }, 1000); //runs every second

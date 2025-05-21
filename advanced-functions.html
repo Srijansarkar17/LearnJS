@@ -12,9 +12,28 @@
 </head>
 
 <body>
-
+    <button class="js-button">Click</button>
 
     <script>
+        //addEventListener() -- lets us run some code when we interact with the element(sort of does the same thing as onclick)
+        
+        const buttonElement = document.querySelector('.js-button');
+
+        const eventListener = () => {
+            console.log('button clicked');
+        }
+        buttonElement.addEventListener('click', eventListener);
+        //syntax - (event, function which we want to run)
+        //addEventListener helps us add multiple event listeners for an event
+        buttonElement.addEventListener('click', () => {
+            console.log('button clicked 2');
+        });
+
+        //Helps us remove eventListener using removeEventListener
+        buttonElement.removeEventListener('click', eventListener)
+
+
+
         /*
         function greeting(){
             console.log("Hello");
@@ -102,6 +121,8 @@
         //     console.log(value)
         // })
 
+
+        /*
         //to use continue with forEach Loop
         [
             'make dinner',
@@ -113,8 +134,52 @@
             }
             console.log(index); //displays index 
             console.log(value)
-        })
+        });
 
+        const regularFunction = function(param, param2){
+            console.log('hello');
+            return 5;
+        }
+
+        //Arrow Functions
+        const arrowFunction = (param, param2) => { //works same way as regular function
+            console.log('hello');
+            return 5;
+        };
+        arrowFunction(); //to call an arrowFunction
+
+
+        const oneParam = (param) => {
+            console.log(param+1);
+        };
+        oneParam(2);
+
+        const oneLine = () => 2+3; //one line arrow function, it will return 2+3 automatically
+        console.log(oneLine());
+
+        // using arrow function in this code instead of normal function
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach((value, index) => { //forEach loop loops through every element in the array and displays the value
+            if(value === 'wash dishes'){
+                return; //this return statment will end this function early, meaning it will skip wash dishes; basically the same thing continue does in for loop
+            }
+            console.log(index); //displays index 
+            console.log(value);
+        });
+        //whenever we use a function inside a function, like in this case we are using a function inside the forEach function, it is preferred to use arrowFunctions in that case
+
+        const object2 = {
+            method: () => { //arrow function inside objects
+
+            },
+            method() { //shorthand function inside object
+                //it is preferred to use shorthand function inside objects because it is easier to use
+            }
+        };
+        */
     </script>
 </body>
 
