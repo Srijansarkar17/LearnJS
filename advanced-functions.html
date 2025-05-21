@@ -93,11 +93,24 @@
 
         console.log('next line2');
         */
+        // [
+        //     'make dinner',
+        //     'wash dishes',
+        //     'watch youtube'
+        // ].forEach(function(value, index) { //forEach loop     loops through every element in the array and displays the value
+        //     console.log(index); //displays index 
+        //     console.log(value)
+        // })
+
+        //to use continue with forEach Loop
         [
             'make dinner',
             'wash dishes',
             'watch youtube'
         ].forEach(function(value, index) { //forEach loop loops through every element in the array and displays the value
+            if(value === 'wash dishes'){
+                return; //this return statment will end this function early, meaning it will skip wash dishes; basically the same thing continue does in for loop
+            }
             console.log(index); //displays index 
             console.log(value)
         })
