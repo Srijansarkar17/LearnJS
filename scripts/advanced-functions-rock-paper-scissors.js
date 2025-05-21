@@ -34,6 +34,45 @@ function autoPlay(){
     }
 }
 
+//Instead of using onclick attribute in html file we are switching to the addEventListener function
+document.querySelector('.js-rock-button')
+    .addEventListener('click', () => {
+        playGame('Rock');
+    }); //we need to include the playGame function inside another function while using eventListener
+
+document.querySelector('.js-paper-button')
+    .addEventListener('click', () => {
+        playGame('Paper');
+    });
+
+document.querySelector('.js-scissors-button')
+    .addEventListener('click', () => {
+        playGame('Scissors');
+    });
+
+document.querySelector('.js-autoplay-button')
+    .addEventListener('click', () => {
+        autoPlay();
+    });
+
+
+//Now we want to add a feature wherein if we want to play some game if we press 'r' - it means rock, 's' - means scissors, 'p' means paper
+//so for this we will use addEventListener for keydown
+
+//we are using document.body because we want it to run if we press the button on anywhere on the page
+document.body.addEventListener('keydown', (event) => { //the event parameter contains the key we pressed, it is an inbuilt feature of addEventListener
+    // console.log(event.key); displays the key we pressed
+    if(event.key === 'r'){ //if the key is 'r' we play with rock
+        playGame('Rock');
+    }
+    else if(event.key === 'p'){
+        playGame('Paper');
+    }
+    else if(event.key === 's'){
+        playGame('Scissors');
+    }
+})
+
 function playGame(playerMove) {
     const computerMove = pickComputerMove();
 

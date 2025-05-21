@@ -30,8 +30,14 @@
         });
 
         //Helps us remove eventListener using removeEventListener
-        buttonElement.removeEventListener('click', eventListener)
+        buttonElement.removeEventListener('click', eventListener);
 
+        /*Features of addEventListener
+        - We can add multiple eventlisteners for the same element
+        - We can also remove an eventListener
+        */
+
+        // So the best practice is to use eventListener instead of onclick
 
 
         /*
